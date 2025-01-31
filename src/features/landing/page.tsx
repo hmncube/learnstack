@@ -7,7 +7,6 @@ import { css } from "../../../styled-system/css";
 import { HStack, VStack } from "../../../styled-system/jsx";
 import Header from 'src/components/header';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
 import AnimatedDiv from 'src/components/animated-div';
 
 export default function Landing() {
@@ -23,7 +22,7 @@ export default function Landing() {
         e.preventDefault();
         const element = document.getElementById(id);
         if (element) {
-            const headerOffset = 80; // Adjust this value based on your header height
+            const headerOffset = 80;
             const elementPosition = element.getBoundingClientRect().top;
             const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 
@@ -44,7 +43,7 @@ export default function Landing() {
     return (
         <>
             <Header showUser={false} children={links} />
-            <AnimatedDiv id='Hero' backgroundColor= '#FDF5E6'>
+            <AnimatedDiv id='Hero' backgroundColor='#FDF5E6'>
                 <VStack paddingTop={8}>
                     <PageIcon />
                     <h1 className={css({ fontSize: '4xl', fontWeight: 'bold', mt: 4 })}>LearnStack</h1>
@@ -54,18 +53,19 @@ export default function Landing() {
             </AnimatedDiv>
             <AnimatedDiv backgroundColor='#E3F2FD' id='Features'>
                 <VStack paddingTop={8}>
-                    <PageIcon />
-                    <h1 className={css({ fontSize: '4xl', fontWeight: 'bold', mt: 4 })}>LearnStack</h1>
-                    <h2 className={css({ fontSize: '2xl', fontWeight: 'bold', mt: 4, mb: 4 })}>Organize, Label, and Learn at Your Pace!</h2>
-                    <button onClick={handleGetStartedClicked} className={button({ visual: 'solidBordered', size: 'sm' })} style={{ cursor: 'pointer' }}>Get started</button>
+                    <h1 className={css({ fontSize: '4xl', fontWeight: 'bold', mt: 4 })}>Features</h1>
                 </VStack>
             </AnimatedDiv>
 
-            <AnimatedDiv id='Demo' backgroundColor= '#FAFAFA'>
-                <h1>Demo</h1>
+            <AnimatedDiv id='Demo' backgroundColor='#FAFAFA'>
+                <VStack paddingTop={8}>
+                    <h1 className={css({ fontSize: '4xl', fontWeight: 'bold', mt: 4 })}>Demo</h1>
+                </VStack>
             </AnimatedDiv>
-            <AnimatedDiv id='AboutUs' backgroundColor= '#F0FFF0'>
-                <h1>About us</h1>
+            <AnimatedDiv id='AboutUs' backgroundColor='#F0FFF0'>
+                <VStack paddingTop={8}>
+                    <h1 className={css({ fontSize: '4xl', fontWeight: 'bold', mt: 4 })}>About us</h1>
+                </VStack>
             </AnimatedDiv>
             <button
                 onClick={scrollToTop}

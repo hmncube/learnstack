@@ -1,12 +1,10 @@
 import Link from "next/link";
 import { css } from "../../styled-system/css";
 import { HStack } from "../../styled-system/jsx";
-import { Camera, CircleUserRound } from 'lucide-react';
+import { CircleUserRound } from 'lucide-react';
 import { JSX } from "react";
 
 interface HeaderProps {
-    // onSendEditedMessage?: (message: string, parent_message_id: string | null) => void;
-    // isChatLoading: boolean;
     showUser: boolean;
     children?: JSX.Element;
   }
