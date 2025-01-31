@@ -7,12 +7,15 @@ import { css } from "../../../styled-system/css";
 import { HStack, VStack } from "../../../styled-system/jsx";
 import Header from 'src/components/header';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import AnimatedDiv from 'src/components/animated-div';
 
 export default function Landing() {
+    const router = useRouter();
+
     const handleGetStartedClicked = () => {
-        console.log('Get started clicked');
-    }
+        router.push('/auth/signup');
+    };
 
     const scrollToTop = () => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -34,6 +37,7 @@ export default function Landing() {
     }
 
     const links = <HStack>
+        <button onClick={handleGetStartedClicked} className={button({ visual: 'solidBordered', size: 'sm' })} style={{ cursor: 'pointer' }}>Get started</button>
         <Link href="#Hero" onClick={(e) => scrollToSection(e, 'Hero')} className={css({ m: 4, fontSize: '2xl' })}>Hero</Link>
         <Link href="#Features" onClick={(e) => scrollToSection(e, 'Features')} className={css({ m: 4, fontSize: '2xl' })}>Features</Link>
         <Link href="#Demo" onClick={(e) => scrollToSection(e, 'Demo')} className={css({ m: 4, fontSize: '2xl' })}>Demo</Link>
