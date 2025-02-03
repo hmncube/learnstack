@@ -2,7 +2,7 @@
 
 import React from 'react';
 import button from '../../components/button';
-import PageIcon from '../../components/page-icon';
+import LearnstackIcon from '../../components/learnstack-icon';
 import { css } from "../../../styled-system/css";
 import { HStack, VStack } from "../../../styled-system/jsx";
 import Header from 'src/components/header';
@@ -49,7 +49,7 @@ export default function Landing() {
             <Header showUser={false} children={links} />
             <AnimatedDiv id='Hero' backgroundColor='#FDF5E6'>
                 <VStack paddingTop={8}>
-                    <PageIcon />
+                    <LearnstackIcon />
                     <h1 className={css({ fontSize: '4xl', fontWeight: 'bold', mt: 4 })}>LearnStack</h1>
                     <h2 className={css({ fontSize: '2xl', fontWeight: 'bold', mt: 4, mb: 4 })}>Organize, Label, and Learn at Your Pace!</h2>
                     <button onClick={handleGetStartedClicked} className={button({ visual: 'solidBordered', size: 'sm' })} style={{ cursor: 'pointer' }}>Get started</button>

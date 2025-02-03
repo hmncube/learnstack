@@ -1,4 +1,4 @@
-export default function PageIcon() {
+export default function LearnstackIcon() {
   return (
     <svg width="80px" height="80px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M19.8978 16H7.89778C6.96781 16 6.50282 16 6.12132 16.1022C5.08604 16.3796 4.2774 17.1883 4 18.2235" stroke="#1C274D" strokeWidth="1.5" />
