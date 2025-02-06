@@ -10,9 +10,12 @@ export const authOptions = {
     ],
     pages: {
         signIn: '/auth/signup',
-      },
+    },
+    session: {
+        jwt: true,
+        maxAge: 30 * 24 * 60 * 60, // 30 days in seconds
+    },
 }
 const handler = NextAuth(authOptions);
 
 export { handler as GET, handler as POST }
-
